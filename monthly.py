@@ -21,7 +21,7 @@ df.columns = [c.strip().lower() for c in df.columns]
 
 # nøkel kolonner
 date_col = next(c for c in ["landingsdato","landings_dato","landingsdato (yyyy-mm-dd)"] if c in df.columns)
-dok_col  = next(c for c in ["dokumenttype","dokument_type"] if c in df.columns)
+dok_col  = next(c for c in ["dokumenttype (kode)", "dokumenttype", "dokument_type"] if c in df.columns)
 qty_col  = next(c for c in ["rundvekt","kvantum_rundvekt","kvantum (rundvekt)"] if c in df.columns)
 val_col  = next((c for c in ["forstehandsverdi","førstehandsverdi","forstehands_verdi"] if c in df.columns), None)
 
