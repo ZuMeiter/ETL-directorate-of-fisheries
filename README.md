@@ -53,7 +53,7 @@ are deliberately excluded from Git via .gitignore.
 
   3. Getting the project
 -Option A - clone via Git (recommended)
-git clone https://github.com/NAME-USER/ETL-directorate-of-fisheries.git
+git clone https://github.com/ZuMeiter/ETL-directorate-of-fisheries.git
 cd ETL-directorate-of-fisheries
 
 -Option B - download ZIP
