@@ -21,7 +21,7 @@ def main():
     fr_monthly.to_parquet(OUT / "landings_foreign_monthly.parquet", index=False)
     fr_monthly.to_csv(OUT / "landings_foreign_monthly.csv", index=False)
 
-    print(" Finish: data/processed/*.csv|*.parquet")
+    print(" Готово: data/processed/*.csv|*.parquet")
 
 if __name__ == "__main__":
     main()
