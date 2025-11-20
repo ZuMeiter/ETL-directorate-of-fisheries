@@ -5,16 +5,16 @@ def transform_landings_no(path: str):
     df = smart_read_csv(path)
     df = normalize(df)
 
-    # фільтруємо slutt­seddel (dokumenttype == "0")
+    # filter slutt­seddel (dokumenttype == "0")
     for c in ["dokumenttype (kode)", "dokumenttype", "dokument_type", "dokument type"]:
         if c in df.columns:
             df = df[df[c].astype(str).str.strip() == "0"]
             break
 
-    # додаємо рік / місяць, якщо вони є датою
+    # add year/month if they are a date
     df = add_period(df)
 
-    # wide -> long робить вже finish_monthly
+    # wide -> long already doing finish_monthly
     return finish_monthly(
         df,
         qty_cols=["rundvekt", "kvantum_rundvekt", "kvantum (rundvekt)"],
