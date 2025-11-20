@@ -2,6 +2,7 @@
 __pycache__/
 *.parquet
 data/processed/*
+!data/processed/.gitkeep
 .DS_Store
 Thumbs.db
 .vscode/
